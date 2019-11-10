@@ -33,6 +33,7 @@
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - Azure Education Program - @Environment.MachineName</p>
+            <p>@System.Web.Configuration.WebConfigurationManager.ConnectionStrings["Entities"]</p>
         </footer>
     </div>
 
