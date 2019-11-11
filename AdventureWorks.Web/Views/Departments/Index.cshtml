@@ -15,18 +15,27 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.GroupName)
-        </td>
-        <td>
-            @Html.ActionLink("View employees", "Employees", new { id = item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GroupName)
+            </td>
+            <td class="employees-link">
+                @Html.ActionLink("View employees", "Employees", new { id = item.Id })
+            </td>
+        </tr>
+    }
 
 </table>
+@section scripts
+{
+    <script language="javascript">
+        jQuery(".employees-link").on("click", function () {
+            appInsights.trackEvent({ name: "EmployeesLinkClicked" });
+        });
+    </script>
+}
