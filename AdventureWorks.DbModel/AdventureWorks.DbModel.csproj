@@ -115,6 +115,9 @@
     <Compile Include="JobCandidate.cs">
       <DependentUpon>AdventureWorksModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Password.cs">
       <DependentUpon>AdventureWorksModel.tt</DependentUpon>
     </Compile>
