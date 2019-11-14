@@ -7,6 +7,7 @@ namespace AdventureWorks.Web.Api
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            config.Formatters.Add(new BrowserJsonFormatter());
 
             // Web API routes
             config.MapHttpAttributeRoutes();
